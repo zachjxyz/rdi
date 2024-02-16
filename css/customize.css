@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* // <uniquifier>: Use a uniquifier for the class name
+// <weight>: Use a value from 100 to 900 */
+
+* {
+    --site-font: "Montserrat", sans-serif;
+}
+
+.montserrat-light {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.montserrat-normal {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.montserrat-bold {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.montserrat-black {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.scroll-left {
+    background-color: black;
+    height: 50px;
+    margin: 10px 0;
+    overflow: auto;
+    position: relative;
+}
+
+.scroll-left p {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    line-height: 50px;
+    text-align: center;
+    white-space: nowrap !important;
+    transform:translateX(100%);
+    animation: scroll-left 15s linear infinite;
+    font-family: var(--site-font);
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: white;
+}
+
+@keyframes scroll-left {
+    0%   {transform: translateX(100%);}
+    100% {transform: translateX(-100%);}
+   }
