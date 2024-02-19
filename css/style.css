@@ -169,6 +169,10 @@ video {
 	height: 100%;
 	width: 100%; }
 
+.faq {
+	margin-top: 25px;
+}
+
 /* Preloader
 -------------------------------------------------------*/
 .loader-mask {
@@ -1902,6 +1906,10 @@ address {
 	line-height: 28px;
 	margin-bottom: 0; }
 
+#contact-form, .contact-item {
+	margin-top: 25px;
+}
+
 #contact-form .message {
 	height: 50px;
 	width: 100%;
@@ -2053,6 +2061,7 @@ address {
 		margin-top: 20px; }
 
 .intro-heading {
+	margin-top: 15px;
 	margin-bottom: 15px; }
 
 /*-------------------------------------------------------*/
@@ -2313,7 +2322,8 @@ address {
 .post-single .article p {
 	margin-bottom: 30px; }
 
-/* Share / tags
+/*-------------------------------------------------------*/
+	/* Share / tags
 /*-------------------------------------------------------*/
 .entry-content .entry-tags span {
 	display: inline-block;
