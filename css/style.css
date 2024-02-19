@@ -2060,8 +2060,11 @@ address {
 	.result:last-of-type {
 		margin-top: 20px; }
 
+.intro {
+	margin-top: 25px;
+}
+
 .intro-heading {
-	margin-top: 15px;
 	margin-bottom: 15px; }
 
 /*-------------------------------------------------------*/
