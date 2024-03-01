@@ -197,7 +197,7 @@ video {
 	text-indent: -9999em;
 	transform: translateZ(0); }
 	.loader div {
-		background-color: #000;
+		background-color: #f00;
 		display: inline-block;
 		float: none;
 		position: absolute;
@@ -2819,7 +2819,7 @@ address {
 	.btn.btn-color:before {
 		background-color: #3d3d3d; }
 	.btn.btn-color:after {
-		background-color: #171717; }
+		background-color: #f00; }
 	.btn.btn-transparent {
 		background-color: transparent; }
 		.btn.btn-transparent:before {
