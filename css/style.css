@@ -757,7 +757,8 @@ ol.numbers {
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
 	transition: all 0.3s ease-in-out;
-	z-index: 120; }
+	z-index: 120;
+}
 
 .navigation {
 	width: 100%;
@@ -833,7 +834,7 @@ header .flex-child.flex-right {
 
 .navbar-header,
 .nav-wrap {
-	padding: 0 15px; }
+	padding: 0 0px; }
 
 .navbar-nav {
 	margin: 0;
@@ -1342,7 +1343,7 @@ input.main-search-input:-ms-input-placeholder {
 	.nav-type-2 .logo-container {
 		width: 100%; }
 	.nav-type-2 .logo-container {
-		padding: 0 15px; }
+		padding: 0 0; }
 	.nav-type-2 .navbar-header {
 		padding: 0; }
 	.nav-type-2 .logo-wrap > a {
@@ -1533,7 +1534,7 @@ input.main-search-input:-ms-input-placeholder {
 		padding: 0; }
 	.dropdown-menu.megamenu,
 	.dropdown-menu.megamenu-wide {
-		padding: 0 15px; }
+		padding: 0 0; }
 	.megamenu-item {
 		border-right: none;
 		padding: 0; }
