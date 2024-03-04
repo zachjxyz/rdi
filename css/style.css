@@ -173,6 +173,37 @@ video {
 	margin-top: 25px;
 }
 
+.marquee {
+	margin: 0;
+	display: flex;
+	white-space: nowrap;
+	width: 100%;
+	overflow: hidden;
+	background-color: #000;
+	height: 5rem;
+}
+
+.loop-text {
+	margin: auto;
+	color: #fff;
+	font-size: 2.5rem;
+	text-transform: uppercase;
+	font-weight: 700;
+	animation: loopText 7s infinite linear;
+}
+
+@keyframes loopText {
+
+from {
+	transform: translateX(0);
+	}
+
+to {
+	transform: translateX(-100%);
+	}
+
+}
+
 /* Preloader
 -------------------------------------------------------*/
 .loader-mask {
@@ -3531,6 +3562,12 @@ h2.heading-frame {
 
 #products-grid .product-img {
 	margin-bottom: 0; }
+
+.sq_btn {
+	display: inline-block;
+	font-size: 1.5rem;
+	text-align: center;
+}
 
 /*-------------------------------------------------------*/
 /* Catalogue
