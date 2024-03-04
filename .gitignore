@@ -11,4 +11,5 @@ img/testimonials/*
 img/promo_2_bg.png
 faq.html
 shop-*.html
-*.php
+action.php
+contact.php
