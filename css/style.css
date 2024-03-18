@@ -4285,6 +4285,11 @@ abbr.required {
 /*-------------------------------------------------------*/
 /* Footer Type-1
 /*-------------------------------------------------------*/
+.newsletter {
+	/* background-color: #1a1e1d; */
+	height: 45vh;
+}
+
 .footer {
 	background-color: black;
 	color: white;
