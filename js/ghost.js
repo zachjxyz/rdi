@@ -7,19 +7,23 @@ document.addEventListener("DOMContentLoaded", function(event) {
     })
     .then(data => {
 
-        console.log(data);
+        let numOfBlogs = Object.keys(data).length;
 
-        numOfBlogs = Object.keys(data).length;
-
-        blogPosts = document.getElementById('post-content');
+        let blogPosts = document.getElementById('post-content');
 
         for (i = numOfBlogs; i >= 0; i--) {
 
-            title = data.posts[i].title;
-            image = data.posts[i].feature_image;
-            excerpt = data.posts[i].custom_excerpt;
-            link = data.posts[i].url;
-            reading_time = data.posts[i].reading_time;
+            let title = data.posts[i].title;
+            let image = data.posts[i].feature_image;
+            let excerpt = data.posts[i].custom_excerpt;
+            let link = data.posts[i].url;
+            let published_date = Date.parse(data.posts[i].published_at);
+
+            var date = new Date(published_date);
+
+            let year = date.getFullYear();
+            let month = (date.getMonth() + 1).toString().padStart(2, "0");
+            let day = date.getUTCDate();
 
             blogPosts.insertAdjacentHTML("afterbegin", 
                 `<article class="entry-item">
@@ -33,6 +37,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
                         <h2 class="entry-title">${title}
                             <a href="${link}" target="_blank"></a>
                         </h2>
+                        <ul class="entry-meta">
+                      <li class="entry-date">
+                        <i class="fa fa-calendar-o"></i>
+                        ${month}/${day}/${year}
+                      </li>
                         <div class="entry-content">
                             <p>${excerpt}</p>
                             <a href="${link}" target="_blank" class="btn btn-lg btn-stroke"><span>Read More</span></a>
@@ -41,7 +50,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
                     </div>
                 </article>`
             );
-            console.log(title);
         }
     })
     .catch(error  => console.log(error));
