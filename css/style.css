@@ -2138,8 +2138,8 @@ address {
 /*-------------------------------------------------------*/
 .entry-img {
 	position: relative;
-	overflow: hidden; }
-
+	overflow: hidden;
+}
 .entry-meta {
 	margin-bottom: 14px; }
 
@@ -2159,7 +2159,11 @@ address {
 
 .entry-wrap {
 	position: relative;
-	padding-top: 38px; }
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 25px 25px 0 25px;
+}
 
 .entry-title {
 	font-size: 20px;
@@ -2176,7 +2180,12 @@ address {
 
 .blog-standard .entry-item {
 	margin-bottom: 50px;
-	position: relative; }
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
 
 .blog-standard .post-content p {
 	margin-bottom: 23px; }
@@ -2187,7 +2196,9 @@ address {
 	font-weight: 700; }
 
 .post-content {
-	padding-right: 3.2%; }
+	padding-right: 10px;
+	padding-left: 10px
+}
 
 /* Quote Post
 -------------------------------------------------------*/
@@ -2281,11 +2292,6 @@ address {
 -------------------------------------------------------*/
 .post-small img {
 	width: auto; }
-
-.entry-list .entry-img {
-	float: left;
-	margin-right: 20px;
-	margin-bottom: 0; }
 
 .entry-list li .entry-meta {
 	margin-top: 0;
@@ -4388,7 +4394,8 @@ abbr.required {
 	.title-text h1 {
 		font-size: 24px; }
 	.blog-standard .post-content {
-		padding-right: 15px; }
+		padding-right: 15px;
+		padding-left: 15px; }
 	.project-description {
 		padding-left: 15px;
 		margin-top: 30px; }
