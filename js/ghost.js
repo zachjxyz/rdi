@@ -7,11 +7,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
     })
     .then(data => {
 
+        console.log(data);
+
         numOfBlogs = Object.keys(data).length;
 
         blogPosts = document.getElementById('post-content');
 
-        for (i = numOfBlogs - 1; i >= 0; i--) {
+        for (i = numOfBlogs; i >= 0; i--) {
 
             title = data.posts[i].title;
             image = data.posts[i].feature_image;
@@ -39,6 +41,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
                     </div>
                 </article>`
             );
+            console.log(title);
         }
     })
     .catch(error  => console.log(error));
