@@ -13,38 +13,38 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
         for (i = numOfBlogs; i >= 0; i--) {
 
-            let title = data.posts[i].title;
-            let image = data.posts[i].feature_image;
-            let excerpt = data.posts[i].custom_excerpt;
-            let link = data.posts[i].url;
-            let published_date = Date.parse(data.posts[i].published_at);
+            let blog_title = data.posts[i].title;
+            let blog_image = data.posts[i].feature_image;
+            let blog_excerpt = data.posts[i].custom_excerpt;
+            let blog_link = data.posts[i].url;
+            let blog_published_date = Date.parse(data.posts[i].published_at);
 
-            var date = new Date(published_date);
+            var date = new Date(blog_published_date);
 
-            let year = date.getFullYear();
-            let month = (date.getMonth() + 1).toString().padStart(2, "0");
-            let day = date.getUTCDate();
+            let blog_year = date.getFullYear();
+            let blog_month = (date.getMonth() + 1).toString().padStart(2, "0");
+            let blog_day = date.getUTCDate();
 
             blogPosts.insertAdjacentHTML("afterbegin", 
                 `<article class="entry-item">
                     <div class="entry-img">
-                        <a href="${link}" target="_blank">
-                        <img src="${image}" alt="${title}">
+                        <a href="${blog_link}" target="_blank">
+                        <img src="${blog_image}" alt="${blog_title}">
                         </a>
                     </div>
                     <div class="entry-wrap">
                         <div class="entry">  
-                        <h2 class="entry-title">${title}
-                            <a href="${link}" target="_blank"></a>
+                        <h2 class="entry-title">${blog_title}
+                            <a href="${blog_link}" target="_blank"></a>
                         </h2>
                         <ul class="entry-meta">
                       <li class="entry-date">
                         <i class="fa fa-calendar-o"></i>
-                        ${month}/${day}/${year}
+                        ${blog_month}/${blog_day}/${blog_year}
                       </li>
                         <div class="entry-content">
-                            <p>${excerpt}</p>
-                            <a href="${link}" target="_blank" class="btn btn-lg btn-stroke"><span>Read More</span></a>
+                            <p>${blog_excerpt}</p>
+                            <a href="${blog_link}" target="_blank" class="btn btn-lg btn-stroke"><span>Read More</span></a>
                         </div>
                         </div>
                     </div>
