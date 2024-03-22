@@ -2923,6 +2923,11 @@ address {
 .rounded:before {
 	border-radius: 70px; }
 
+.read-more-btn {
+	display: flex;
+	justify-content: center;
+}
+
 /*-------------------------------------------------------*/
 /* Social Icons
 /*-------------------------------------------------------*/

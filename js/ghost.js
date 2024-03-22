@@ -32,17 +32,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
                     </div>
                     <div class="entry-wrap">
                         <div class="entry">  
-                        <h2 class="entry-title">${blog_title}
+                        <h2 class="entry-title">${blog_month}/${blog_day}/${blog_year}: ${blog_title}
                             <a href="${blog_link}" target="_blank"></a>
                         </h2>
-                        <ul class="entry-meta">
-                      <li class="entry-date">
-                        <i class="fa fa-calendar-o"></i>
-                        ${blog_month}/${blog_day}/${blog_year}
-                      </li>
                         <div class="entry-content">
                             <p>${blog_excerpt}</p>
-                            <a href="${blog_link}" target="_blank" class="btn btn-lg btn-stroke"><span>Read More</span></a>
+                            <a href="${blog_link}" target="_blank" class="btn btn-lg btn-stroke read-more-btn"><span>Read More</span></a>
                         </div>
                         </div>
                     </div>
