@@ -6,12 +6,17 @@ document.addEventListener("DOMContentLoaded", function(event) {
         return res.json();
     })
     .then(data => {
+        console.log(data);
+
         idx_of_blogs = Object.keys(data.posts).length - 1;
 
         blog_posts = document.getElementById('post-content');
 
         for (i = idx_of_blogs; i >= 0; i--) {
-            let author = data.posts[i].authors[i].name;
+            let blog_id = data.posts[i].id;
+            let blog_html = data.posts[i].html;
+            let blog_slug = data.posts[i].slug;
+            let blog_author = data.posts[i].authors[i].name;
             let blog_title = data.posts[i].title;
             let blog_image = data.posts[i].feature_image;
             let blog_excerpt = data.posts[i].custom_excerpt;
@@ -24,23 +29,22 @@ document.addEventListener("DOMContentLoaded", function(event) {
             let blog_year = date.getFullYear();
             let blog_month = (date.getMonth() + 1).toString().padStart(2, "0");
             let blog_day = date.getUTCDate();
-
+            
             blog_posts.insertAdjacentHTML("afterbegin", 
                 `<article class="entry-item">
                     <div class="entry-img">
-                        <a href="${blog_link}" target="_blank">
+                        <a href="/${blog_slug}" id="create-blog">
                         <img src="${blog_image}" alt="${blog_title}">
                         </a>
                     </div>
                     <div class="entry-wrap">
                         <div class="entry">  
                         <h2 class="entry-title">${blog_month}/${blog_day}/${blog_year}: ${blog_title}
-                            <a href="${blog_link}" target="_blank"></a>
                         </h2>
                         <ul class="entry-meta">
                             <li class="entry-author">
                                 <i class="fa fa-user"></i>
-                                ${author}
+                                ${blog_author}
                             </li> 
                             <li class="entry-date">
                                 <i class="fa-book"></i>
@@ -49,12 +53,17 @@ document.addEventListener("DOMContentLoaded", function(event) {
                         </ul>
                         <div class="entry-content">
                             <p>${blog_excerpt}</p>
-                            <a href="${blog_link}" target="_blank" class="btn btn-lg btn-stroke read-more-btn"><span>Read More</span></a>
+                            <a href="/${blog_slug}" class="btn btn-lg btn-stroke read-more-btn" id="create-blog"><span>Read More</span></a>
                         </div>
                         </div>
                     </div>
                 </article>`
             );
+
+            document.getElementById("create-blog").addEventListener("click", function(event) {
+                document.getElementById("create-blog").setAttribute('href', `${blog_link}`
+                );
+            });
         }
     })
     .catch(error  => console.log(error));
