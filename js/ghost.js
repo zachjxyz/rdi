@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
                             </li> 
                             <li class="entry-date">
                                 <i class="fa fa-book"></i>
-                                READING TIME: ${reading_time} MINS
+                                ${reading_time} mins
                             </li>
                         </ul>
                         <div class="entry-content">
