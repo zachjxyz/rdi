@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
                                 ${blog_author}
                             </li> 
                             <li class="entry-date">
-                                <i class="fa-book"></i>
+                                <i class="fa fa-book"></i>
                                 READING TIME: ${reading_time} MINS
                             </li>
                         </ul>
