@@ -6,8 +6,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
         return res.json();
     })
     .then(data => {
-        console.log(data);
-
         idx_of_blogs = Object.keys(data.posts).length - 1;
 
         blog_posts = document.getElementById('post-content');
@@ -33,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
             blog_posts.insertAdjacentHTML("afterbegin", 
                 `<article class="entry-item">
                     <div class="entry-img">
-                        <a href="/${blog_slug}" id="create-blog">
+                        <a href="${blog_link}" id="create-blog">
                         <img src="${blog_image}" alt="${blog_title}">
                         </a>
                     </div>
@@ -53,17 +51,17 @@ document.addEventListener("DOMContentLoaded", function(event) {
                         </ul>
                         <div class="entry-content">
                             <p>${blog_excerpt}</p>
-                            <a href="/${blog_slug}" class="btn btn-lg btn-stroke read-more-btn" id="create-blog"><span>Read More</span></a>
+                            <a href="${blog_link}" class="btn btn-lg btn-stroke read-more-btn" id="create-blog"><span>Read More</span></a>
                         </div>
                         </div>
                     </div>
                 </article>`
             );
 
-            document.getElementById("create-blog").addEventListener("click", function(event) {
-                document.getElementById("create-blog").setAttribute('href', `${blog_link}`
-                );
-            });
+            // document.getElementById("create-blog").addEventListener("click", function(event) {
+            //     document.getElementById("create-blog").setAttribute('href', `${blog_link}`
+            //     );
+            // });
         }
     })
     .catch(error  => console.log(error));
