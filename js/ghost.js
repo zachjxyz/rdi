@@ -29,7 +29,7 @@ api.posts.browse({
                 </div>
                 <div class="entry-wrap">
                     <div class="entry">  
-                    <h2 class="entry-title">${blog_month}/${blog_day}/${blog_year}: ${post.title}
+                    <h2 class="entry-title">${post.title}
                     </h2>
                     <ul class="entry-meta">
                         <li class="entry-author">
